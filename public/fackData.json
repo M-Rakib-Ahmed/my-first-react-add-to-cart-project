@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "image": "https://i.ibb.co.com/PgyX82z/alexander-mass-yd4da-ZHEtc-A-unsplash.jpg",
+    "description": "High-quality wireless headphones with noise cancellation.",
+    "price": 99.99,
+    "category": "Electronics",
+    "isFeature": true
+  },
+  {
+    "id": 2,
+    "name": "Smartphone",
+    "image": "https://i.ibb.co.com/4YqKPyX/kevin-wang-6orbr-APihr-M-unsplash.jpg",
+    "description": "Latest model smartphone with advanced features.",
+    "price": 699.99,
+    "category": "Electronics",
+    "isFeature": false
+  },
+  {
+    "id": 3,
+    "name": "Running Shoes",
+    "image": "https://i.ibb.co.com/yP1ZkW1/shelby-murphy-figueroa-Ods-Mnw-A5uk-unsplash.jpg",
+    "description": "Comfortable and durable running shoes.",
+    "price": 59.99,
+    "category": "Footwear",
+    "isFeature": true
+  },
+  {
+    "id": 4,
+    "name": "Backpack",
+    "image": "https://i.ibb.co.com/4VL3J0J/david-becker-c-Iff-DN-Gqo-A-unsplash.jpg",
+    "description": "Spacious backpack for travel and daily use.",
+    "price": 39.99,
+    "category": "Accessories",
+    "isFeature": false
+  },
+  {
+    "id": 5,
+    "name": "Smart Watch",
+    "image": "https://i.ibb.co.com/NyBfvcn/logan-weaver-lgnwvr-Kpu-CXkq3wy-Q-unsplash.jpg",
+    "description": "Water-resistant smartwatch with fitness tracking.",
+    "price": 199.99,
+    "category": "Electronics",
+    "isFeature": true
+  }
+]

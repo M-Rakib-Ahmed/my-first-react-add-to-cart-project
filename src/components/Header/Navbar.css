@@ -1,0 +1,22 @@
+.vavbar-container{
+    display: flex; 
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    
+    
+    
+}
+.bg-color{
+ background-color: skyblue;
+ 
+ 
+}
+
+.navtext{
+    display: flex; 
+    gap: 10px;
+    font-size: 20px;
+    list-style: none;
+    text-transform: uppercase;
+}

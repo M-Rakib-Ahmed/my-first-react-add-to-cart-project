@@ -29,32 +29,30 @@ const App = () => {
 const [selectedProducts, setSelectedProducts]=useState([])
 
 const handleSelectedProduct =(product)=>{
-  const newProducts = [...selectedProducts, product]
+  const isessit = selectedProducts.find((p)=>p.id == product.id);
+  if(isessit){
+    alert('ar add kora jabe na')
+    
+  }
+  else{
+ const newProducts = [...selectedProducts, product] 
 setSelectedProducts(newProducts)
+    
+  }
   
   
-  
+ 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
   
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar selectedProducts={selectedProducts}></Navbar>
      <div className="flex">
        <Allproducts handleSelectedProduct={handleSelectedProduct}></Allproducts>
-      <CartContainer isActive={isActive} handleIsactive={handleIsactive}></CartContainer>
+      <CartContainer selectedProducts={selectedProducts} isActive={isActive} handleIsactive={handleIsactive}></CartContainer>
      </div>
     </div>
     

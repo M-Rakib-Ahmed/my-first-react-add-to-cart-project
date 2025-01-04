@@ -1,5 +1,5 @@
 import './Navbar.css'
-const Navbar = () => {
+const Navbar = ({selectedProducts}) => {
     return (
         <div className='bg-color' >
             <div className="vavbar-container">
@@ -10,7 +10,7 @@ const Navbar = () => {
             <ul className='navtext'>
                 <li>home</li>
                 <li>products</li>
-                <li>cart 1</li>
+                <li>cart:{selectedProducts.length}</li>
                 <li>$ 500</li>
             </ul>
           </div>

@@ -2,7 +2,7 @@ import About from '../About/About';
 import Cart from '../Cart/Cart';
 import './CartContainer.css'
 
-const CartContainer = ({handleIsactive, isActive}) => {
+const CartContainer = ({handleIsactive, isActive, selectedProducts}) => {
   
   
     return (
@@ -12,7 +12,7 @@ const CartContainer = ({handleIsactive, isActive}) => {
             <div onClick={()=>handleIsactive('cart')} className={`${isActive.cart? "btn active":"btn"}`}>CART</div>
             <div onClick={()=> handleIsactive('about')} className={`${isActive.cart? "btn ":"active btn"}`}>ABOUT</div>
           </div>
-         {isActive.cart? <Cart></Cart>:
+         {isActive.cart? <Cart selectedProducts={selectedProducts}></Cart>:
           <About></About>}
         </div>
     );

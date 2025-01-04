@@ -25,8 +25,27 @@ const App = () => {
      }) 
     )
   }
+//  price functon here
+const [price, setPrice] =useState(500)
  
+const handleAddPrice =(pr)=>{
+  setPrice(price + pr)
+}
+
+const handleDeletePrice =(id)=>{
+  const product = selectedProducts.find((p)=>p.id ==id)
+  setPrice(price-product.price)
+}
+
+
 const [selectedProducts, setSelectedProducts]=useState([])
+
+const handleDelete =(id) => {
+  handleDeletePrice(id)
+  const newProuect = selectedProducts.filter((p)=> p.id!==id)
+  setSelectedProducts(newProuect)
+  
+}
 
 const handleSelectedProduct =(product)=>{
   const isessit = selectedProducts.find((p)=>p.id == product.id);
@@ -35,6 +54,7 @@ const handleSelectedProduct =(product)=>{
     
   }
   else{
+   handleAddPrice (product.price) 
  const newProducts = [...selectedProducts, product] 
 setSelectedProducts(newProducts)
     
@@ -49,10 +69,10 @@ setSelectedProducts(newProducts)
   
   return (
     <div>
-      <Navbar selectedProducts={selectedProducts}></Navbar>
+      <Navbar price={price} selectedProducts={selectedProducts}></Navbar>
      <div className="flex">
        <Allproducts handleSelectedProduct={handleSelectedProduct}></Allproducts>
-      <CartContainer selectedProducts={selectedProducts} isActive={isActive} handleIsactive={handleIsactive}></CartContainer>
+      <CartContainer handleDelete={handleDelete} selectedProducts={selectedProducts} isActive={isActive} handleIsactive={handleIsactive}></CartContainer>
      </div>
     </div>
     

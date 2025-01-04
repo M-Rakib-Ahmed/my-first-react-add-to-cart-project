@@ -1,18 +1,20 @@
+import './Cart.css'
 
-
-const Cart = ({selectedProducts}) => {
-  console.log(selectedProducts);
+const Cart = ({selectedProducts, handleDelete}) => {
   
     return (
         <div>
          {
-          selectedProducts.map((p)=> (
-            <div>
+          selectedProducts.map((p, idx)=> (
+            <div key={idx}>
               <div className="flex">
-                <img src={p.image} alt="" />
-                <p>name</p>
+                <img className="selected-image" src={p.image} alt="" />
+                <p>{p.name}</p>
+                 <button onClick={()=>handleDelete(p.id)} className='delete-btn'>dedete</button>
               </div>
+             
             </div>
+            
           ))
          }
         </div>

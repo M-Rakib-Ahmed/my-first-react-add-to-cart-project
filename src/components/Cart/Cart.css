@@ -1,0 +1,12 @@
+.selected-image{
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    
+}
+
+.delete-btn{
+    padding-right: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
